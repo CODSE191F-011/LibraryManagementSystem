@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryManagementSystem.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,9 @@ namespace LibraryManagementSystem
         public DashBoard()
         {
             InitializeComponent();
+            SidePanel.Height = btnSupplier.Height;
+            SidePanel.Top = btnSupplier.Top;
+            supplier1.BringToFront();
         }
 
         private void DashBoard_Load(object sender, EventArgs e)
@@ -56,6 +60,13 @@ namespace LibraryManagementSystem
         private void Mshow(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSupplier_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = btnSupplier.Height;
+            SidePanel.Top = btnSupplier.Top;
+            supplier1.BringToFront();
         }
     }
 }

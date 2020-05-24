@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
+            BunifuAnimatorNS.Animation animation6 = new BunifuAnimatorNS.Animation();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.SidePanel = new System.Windows.Forms.Panel();
@@ -50,6 +50,7 @@
             this.FormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
             this.TransitionMenu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.TransitionMenuHide = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.supplier1 = new LibraryManagementSystem.Views.Supplier();
             this.panelMenu.SuspendLayout();
             this.panel3.SuspendLayout();
             this.context.SuspendLayout();
@@ -171,6 +172,7 @@
             this.btnSupplier.Text = "    Suppliers";
             this.btnSupplier.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSupplier.UseVisualStyleBackColor = true;
+            this.btnSupplier.Click += new System.EventHandler(this.btnSupplier_Click);
             // 
             // btnMembership
             // 
@@ -228,7 +230,8 @@
             // 
             // context
             // 
-            this.context.BackColor = System.Drawing.Color.Gray;
+            this.context.BackColor = System.Drawing.Color.DimGray;
+            this.context.Controls.Add(this.supplier1);
             this.context.Controls.Add(this.panel4);
             this.TransitionMenuHide.SetDecoration(this.context, BunifuAnimatorNS.DecorationType.None);
             this.TransitionMenu.SetDecoration(this.context, BunifuAnimatorNS.DecorationType.None);
@@ -310,44 +313,55 @@
             // 
             this.TransitionMenu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.TransitionMenu.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.TransitionMenu.DefaultAnimation = animation2;
+            animation5.AnimateOnlyDifferences = true;
+            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
+            animation5.LeafCoeff = 0F;
+            animation5.MaxTime = 1F;
+            animation5.MinTime = 0F;
+            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
+            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
+            animation5.MosaicSize = 0;
+            animation5.Padding = new System.Windows.Forms.Padding(0);
+            animation5.RotateCoeff = 0F;
+            animation5.RotateLimit = 0F;
+            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
+            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
+            animation5.TimeCoeff = 0F;
+            animation5.TransparencyCoeff = 0F;
+            this.TransitionMenu.DefaultAnimation = animation5;
             this.TransitionMenu.AllAnimationsCompleted += new System.EventHandler(this.Mshow);
             // 
             // TransitionMenuHide
             // 
             this.TransitionMenuHide.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.TransitionMenuHide.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.TransitionMenuHide.DefaultAnimation = animation1;
+            animation6.AnimateOnlyDifferences = true;
+            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
+            animation6.LeafCoeff = 0F;
+            animation6.MaxTime = 1F;
+            animation6.MinTime = 0F;
+            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
+            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
+            animation6.MosaicSize = 0;
+            animation6.Padding = new System.Windows.Forms.Padding(0);
+            animation6.RotateCoeff = 0F;
+            animation6.RotateLimit = 0F;
+            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
+            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
+            animation6.TimeCoeff = 0F;
+            animation6.TransparencyCoeff = 0F;
+            this.TransitionMenuHide.DefaultAnimation = animation6;
+            // 
+            // supplier1
+            // 
+            this.supplier1.BackColor = System.Drawing.Color.Transparent;
+            this.TransitionMenu.SetDecoration(this.supplier1, BunifuAnimatorNS.DecorationType.None);
+            this.TransitionMenuHide.SetDecoration(this.supplier1, BunifuAnimatorNS.DecorationType.None);
+            this.supplier1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.supplier1.Location = new System.Drawing.Point(0, 48);
+            this.supplier1.Name = "supplier1";
+            this.supplier1.Size = new System.Drawing.Size(738, 553);
+            this.supplier1.TabIndex = 3;
             // 
             // DashBoard
             // 
@@ -394,5 +408,6 @@
         private Bunifu.Framework.UI.BunifuFormFadeTransition FormFadeTransition1;
         private BunifuAnimatorNS.BunifuTransition TransitionMenu;
         private BunifuAnimatorNS.BunifuTransition TransitionMenuHide;
+        private Views.Supplier supplier1;
     }
 }
