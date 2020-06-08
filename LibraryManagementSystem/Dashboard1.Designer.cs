@@ -1,6 +1,6 @@
 ﻿namespace LibraryManagementSystem
 {
-    partial class DashBoard
+    partial class Dashboard1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard1));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnRep = new System.Windows.Forms.Button();
-            this.btnUser = new System.Windows.Forms.Button();
             this.SubSupp = new System.Windows.Forms.Panel();
             this.btnSup = new System.Windows.Forms.Button();
             this.btnPurch = new System.Windows.Forms.Button();
@@ -50,27 +49,25 @@
             this.btnMembers = new System.Windows.Forms.Button();
             this.btnMembership = new System.Windows.Forms.Button();
             this.btnhome = new System.Windows.Forms.Button();
-            this.context = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnOff = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.child1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnWeb = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnHelp = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnOff = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnWeb = new Bunifu.Framework.UI.BunifuImageButton();
             this.panelMenu.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SubSupp.SuspendLayout();
             this.SubBoo.SuspendLayout();
             this.SubMem.SuspendLayout();
-            this.context.SuspendLayout();
-            this.child1.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnWeb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOff)).BeginInit();
+            this.child1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnWeb)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -82,14 +79,13 @@
             this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(230, 601);
-            this.panelMenu.TabIndex = 2;
+            this.panelMenu.TabIndex = 3;
             // 
             // panel3
             // 
             this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel3.Controls.Add(this.btnRep);
-            this.panel3.Controls.Add(this.btnUser);
             this.panel3.Controls.Add(this.SubSupp);
             this.panel3.Controls.Add(this.btnSupp);
             this.panel3.Controls.Add(this.SubBoo);
@@ -102,7 +98,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(230, 485);
             this.panel3.TabIndex = 0;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // btnRep
             // 
@@ -113,30 +108,13 @@
             this.btnRep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnRep.Image = ((System.Drawing.Image)(resources.GetObject("btnRep.Image")));
             this.btnRep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRep.Location = new System.Drawing.Point(0, 545);
+            this.btnRep.Location = new System.Drawing.Point(0, 505);
             this.btnRep.Name = "btnRep";
             this.btnRep.Size = new System.Drawing.Size(213, 40);
             this.btnRep.TabIndex = 20;
             this.btnRep.Text = "    Reports";
             this.btnRep.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRep.UseVisualStyleBackColor = true;
-            // 
-            // btnUser
-            // 
-            this.btnUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUser.FlatAppearance.BorderSize = 0;
-            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnUser.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.Image")));
-            this.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUser.Location = new System.Drawing.Point(0, 505);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(213, 40);
-            this.btnUser.TabIndex = 19;
-            this.btnUser.Text = "    Users";
-            this.btnUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUser.UseVisualStyleBackColor = true;
             // 
             // SubSupp
             // 
@@ -148,7 +126,6 @@
             this.SubSupp.Name = "SubSupp";
             this.SubSupp.Size = new System.Drawing.Size(213, 68);
             this.SubSupp.TabIndex = 18;
-            this.SubSupp.Paint += new System.Windows.Forms.PaintEventHandler(this.SubSupp_Paint);
             // 
             // btnSup
             // 
@@ -410,17 +387,45 @@
             this.btnhome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnhome.UseVisualStyleBackColor = true;
             // 
-            // context
+            // panel4
             // 
-            this.context.BackColor = System.Drawing.Color.DimGray;
-            this.context.Controls.Add(this.child1);
-            this.context.Controls.Add(this.panel4);
-            this.context.Dock = System.Windows.Forms.DockStyle.Left;
-            this.context.Location = new System.Drawing.Point(230, 0);
-            this.context.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.context.Name = "context";
-            this.context.Size = new System.Drawing.Size(747, 601);
-            this.context.TabIndex = 5;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.panel4.Controls.Add(this.btnWeb);
+            this.panel4.Controls.Add(this.btnHelp);
+            this.panel4.Controls.Add(this.btnOff);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.ForeColor = System.Drawing.Color.Navy;
+            this.panel4.Location = new System.Drawing.Point(230, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(741, 52);
+            this.panel4.TabIndex = 4;
+            // 
+            // btnOff
+            // 
+            this.btnOff.BackColor = System.Drawing.Color.Transparent;
+            this.btnOff.Image = ((System.Drawing.Image)(resources.GetObject("btnOff.Image")));
+            this.btnOff.ImageActive = null;
+            this.btnOff.Location = new System.Drawing.Point(699, 12);
+            this.btnOff.Name = "btnOff";
+            this.btnOff.Size = new System.Drawing.Size(30, 28);
+            this.btnOff.TabIndex = 3;
+            this.btnOff.TabStop = false;
+            this.btnOff.Zoom = 10;
+            this.btnOff.Click += new System.EventHandler(this.btnOff_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(164, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(389, 33);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Library Management System";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // child1
             // 
@@ -429,11 +434,10 @@
             this.child1.Controls.Add(this.label3);
             this.child1.Controls.Add(this.label1);
             this.child1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.child1.Location = new System.Drawing.Point(0, 52);
+            this.child1.Location = new System.Drawing.Point(230, 52);
             this.child1.Name = "child1";
-            this.child1.Size = new System.Drawing.Size(747, 549);
-            this.child1.TabIndex = 3;
-            this.child1.Paint += new System.Windows.Forms.PaintEventHandler(this.child1_Paint);
+            this.child1.Size = new System.Drawing.Size(741, 549);
+            this.child1.TabIndex = 5;
             // 
             // label4
             // 
@@ -445,7 +449,6 @@
             this.label4.Size = new System.Drawing.Size(378, 118);
             this.label4.TabIndex = 2;
             this.label4.Text = "System";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -469,94 +472,54 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Library";
             // 
-            // panel4
+            // btnHelp
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.panel4.Controls.Add(this.btnWeb);
-            this.panel4.Controls.Add(this.btnHelp);
-            this.panel4.Controls.Add(this.btnOff);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.ForeColor = System.Drawing.Color.Navy;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(747, 52);
-            this.panel4.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(164, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(389, 33);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Library Management System";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHelp.BackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
+            this.btnHelp.ImageActive = null;
+            this.btnHelp.Location = new System.Drawing.Point(663, 12);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(30, 28);
+            this.btnHelp.TabIndex = 4;
+            this.btnHelp.TabStop = false;
+            this.btnHelp.Zoom = 10;
             // 
             // btnWeb
             // 
             this.btnWeb.BackColor = System.Drawing.Color.Transparent;
             this.btnWeb.Image = ((System.Drawing.Image)(resources.GetObject("btnWeb.Image")));
             this.btnWeb.ImageActive = null;
-            this.btnWeb.Location = new System.Drawing.Point(632, 12);
+            this.btnWeb.Location = new System.Drawing.Point(627, 12);
             this.btnWeb.Name = "btnWeb";
             this.btnWeb.Size = new System.Drawing.Size(30, 28);
-            this.btnWeb.TabIndex = 8;
+            this.btnWeb.TabIndex = 5;
             this.btnWeb.TabStop = false;
             this.btnWeb.Zoom = 10;
             // 
-            // btnHelp
-            // 
-            this.btnHelp.BackColor = System.Drawing.Color.Transparent;
-            this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
-            this.btnHelp.ImageActive = null;
-            this.btnHelp.Location = new System.Drawing.Point(668, 12);
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(30, 28);
-            this.btnHelp.TabIndex = 7;
-            this.btnHelp.TabStop = false;
-            this.btnHelp.Zoom = 10;
-            // 
-            // btnOff
-            // 
-            this.btnOff.BackColor = System.Drawing.Color.Transparent;
-            this.btnOff.Image = ((System.Drawing.Image)(resources.GetObject("btnOff.Image")));
-            this.btnOff.ImageActive = null;
-            this.btnOff.Location = new System.Drawing.Point(704, 12);
-            this.btnOff.Name = "btnOff";
-            this.btnOff.Size = new System.Drawing.Size(30, 28);
-            this.btnOff.TabIndex = 6;
-            this.btnOff.TabStop = false;
-            this.btnOff.Zoom = 10;
-            // 
-            // DashBoard
+            // Dashboard1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(971, 601);
-            this.Controls.Add(this.context);
+            this.Controls.Add(this.child1);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DashBoard";
+            this.Name = "Dashboard1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DashBoard";
-            this.Load += new System.EventHandler(this.DashBoard_Load);
+            this.Text = "Dashboard1";
             this.panelMenu.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.SubSupp.ResumeLayout(false);
             this.SubBoo.ResumeLayout(false);
             this.SubMem.ResumeLayout(false);
-            this.context.ResumeLayout(false);
-            this.child1.ResumeLayout(false);
-            this.child1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnWeb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOff)).EndInit();
+            this.child1.ResumeLayout(false);
+            this.child1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnWeb)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -565,34 +528,32 @@
 
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnMembership;
-        private System.Windows.Forms.Button btnhome;
-        private System.Windows.Forms.Panel context;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnRep;
+        private System.Windows.Forms.Panel SubSupp;
+        private System.Windows.Forms.Button btnSup;
+        private System.Windows.Forms.Button btnPurch;
+        private System.Windows.Forms.Button btnSupp;
+        private System.Windows.Forms.Panel SubBoo;
+        private System.Windows.Forms.Button btnFine;
+        private System.Windows.Forms.Button btnBook;
+        private System.Windows.Forms.Button btnDamage;
+        private System.Windows.Forms.Button btnBorrow;
+        private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.Button btnCopy;
+        private System.Windows.Forms.Button btnBoo;
         private System.Windows.Forms.Panel SubMem;
         private System.Windows.Forms.Button btnMemManage;
         private System.Windows.Forms.Button btnMembers;
-        private System.Windows.Forms.Button btnReturn;
-        private System.Windows.Forms.Button btnBorrow;
-        private System.Windows.Forms.Button btnBook;
-        private System.Windows.Forms.Button btnDamage;
-        private System.Windows.Forms.Button btnCopy;
-        private System.Windows.Forms.Button btnPurch;
-        private System.Windows.Forms.Button btnSup;
-        private System.Windows.Forms.Button btnFine;
-        private System.Windows.Forms.Button btnRep;
-        private System.Windows.Forms.Button btnUser;
-        private System.Windows.Forms.Panel SubSupp;
-        private System.Windows.Forms.Button btnSupp;
-        private System.Windows.Forms.Panel SubBoo;
-        private System.Windows.Forms.Button btnBoo;
+        private System.Windows.Forms.Button btnMembership;
+        private System.Windows.Forms.Button btnhome;
+        private System.Windows.Forms.Panel panel4;
+        private Bunifu.Framework.UI.BunifuImageButton btnOff;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel child1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuImageButton btnWeb;
         private Bunifu.Framework.UI.BunifuImageButton btnHelp;
-        private Bunifu.Framework.UI.BunifuImageButton btnOff;
     }
 }

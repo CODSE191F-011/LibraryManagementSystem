@@ -11,19 +11,19 @@ using System.Windows.Forms;
 
 namespace LibraryManagementSystem
 {
-    public partial class DashBoard : Form
+    public partial class Dashboard1 : Form
     {
-        public DashBoard()
+        public Dashboard1()
         {
             InitializeComponent();
             customizeDesign();
         }
+
         private void customizeDesign()
         {
             SubMem.Visible = false;
             SubBoo.Visible = false;
             SubSupp.Visible = false;
-
         }
         private void hideSubmenu()
         {
@@ -52,63 +52,15 @@ namespace LibraryManagementSystem
                 subMenu.Visible = false;
             }
         }
-        private void DashBoard_Load(object sender, EventArgs e)
-        {
 
+        private void btnMembership_Click(object sender, EventArgs e)
+        {
+            showSubMenu(SubMem);
         }
 
         private void btnOff_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
-            //FormFadeTransition1.HideAsyc(this, true);
-        }
-
-        private void btnSmenu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void formfade(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void Mshow(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSupplier_Click(object sender, EventArgs e)
-        {
-           // SidePanel.Height = btnSupp.Height;
-            //SidePanel.Top = btnSupp.Top;
-            showSubMenu(SubSupp);
-        }
-
-        private void btnMembership_Click(object sender, EventArgs e)
-        {
-            showSubMenu(SubMem);
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBorrow_Click(object sender, EventArgs e)
-        {
-            hideSubmenu();
-        }
-
-        private void supplier1_Load(object sender, EventArgs e)
-        {
-
         }
         //Region Members
         private void btnMembers_Click(object sender, EventArgs e)
@@ -120,8 +72,13 @@ namespace LibraryManagementSystem
         {
             hideSubmenu();
         }
-        // Region Books
+        //Region Books
         private void btnBook_Click(object sender, EventArgs e)
+        {
+            hideSubmenu();
+        }
+
+        private void btnBorrow_Click(object sender, EventArgs e)
         {
             hideSubmenu();
         }
@@ -145,27 +102,10 @@ namespace LibraryManagementSystem
         {
             hideSubmenu();
         }
-        //Region Supplier
-        private void btnSup_Click(object sender, EventArgs e)
-        {
-            openChild1(new Supp());
-            hideSubmenu();
-            
-        }
 
-        private void btnPurch_Click(object sender, EventArgs e)
+        private void btnSupp_Click(object sender, EventArgs e)
         {
-            hideSubmenu();
-        }
-
-        private void btnBooks_Click(object sender, EventArgs e)
-        {
-            showSubMenu(SubBoo);
-        }
-
-        private void SubSupp_Paint(object sender, PaintEventArgs e)
-        {
-
+            showSubMenu(SubSupp);
         }
 
         private void btnBoo_Click(object sender, EventArgs e)
@@ -173,14 +113,16 @@ namespace LibraryManagementSystem
             showSubMenu(SubBoo);
         }
 
-        private void btnSupp_Click(object sender, EventArgs e)
+        private void btnSup_Click(object sender, EventArgs e)
         {
-            showSubMenu(SubSupp);
+            openChild1(new Supp());
+            hideSubmenu();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void btnPurch_Click(object sender, EventArgs e)
         {
-
+            //openChild1(new From());
+            hideSubmenu();
         }
         private Form activeForm = null;
         private void openChild1(Form childForm)
@@ -195,16 +137,6 @@ namespace LibraryManagementSystem
             child1.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-        }
-
-        private void child1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -48,5 +48,12 @@ namespace LibraryManagementSystem
         {
 
         }
+
+        private void lblforgot_click(object sender, EventArgs e)
+        {
+            UForgotSys fr= new UForgotSys();
+            this.Hide();
+            fr.Show();
+        }
     }
 }
